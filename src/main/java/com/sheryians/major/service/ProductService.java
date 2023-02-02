@@ -28,11 +28,12 @@ public class ProductService {
 		productRepository.deleteById(id);
 	}
 	
-	public Optional<Product> getProduct(long id) {
+	public Optional<Product> getProductById(long id) {
 		return productRepository.findById(id);
 	}
 	
 	public List<Product> getAllProductsByCategoryId(int id) {
 		return productRepository.findAllByCategory_Id(id);
 	}
+	
 }
